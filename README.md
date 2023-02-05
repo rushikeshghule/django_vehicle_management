@@ -1,5 +1,3 @@
-# django_vehicle_management
-
 
 # Vehicle Management System
 This is a CRUD (Create, Read, Update, Delete) application for vehicle management. The system allows users to manage information about vehicles, such as their number, type, model, and description.
