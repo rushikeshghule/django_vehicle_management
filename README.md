@@ -13,7 +13,7 @@ IP filtering (restriction to specific IP addresses)
 Python 3.x
 Django 3.x
 Bootstrap 4.x
-## steps
+## Steps
 ### 1) Open the terminal or command prompt
 ### 2)Change the directory to the root folder of the project, "django_vehicle_management-master", using the following command:
 cd django_vehicle_management-master
