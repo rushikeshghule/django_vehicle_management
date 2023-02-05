@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+ {% block title %}
+    <title>form</title>
+ {%endblock%}
+{% block content %}
+<body class="container-sm p-3 mb-2 " style="background-color: lightblue;">
+<center>
+<br>
+<form method="post" style="width: 800px; background-color:white;padding: 40px;border-radius: 10px;" >
+    <div class="container-sm" >
+    <h2><u>Vehicle Info Form</u></h2><br>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+    </div><br>
+</form>
+
+</center>
+</body>
+ {%endblock%}

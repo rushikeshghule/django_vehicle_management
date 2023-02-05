@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+ {% block title %}
+    <title>unouthorized</title>
+ {%endblock%}
+{% block content %}
+<body class="container-sm p-3 mb-2" style="background-color: lightblue;">
+  <center>
+      <div class="container-sm">
+          <h1>Registration page</h1>
+
+                <p style="width: 500px; background-color:orange">{{ msg }}</p>
+                <form  method="post" style="width: 500px; background-color:white;padding: 40px;border-radius: 10px;">
+                    {% csrf_token %}
+                  <div>
+                    <label for="username">Username</label>
+                      {{ form.username }}
+                  </div><br>
+                  <div>
+                    <label for="email">Email</label>
+                      {{ form.email}}
+                  </div><br>
+                  <div>
+                    <label for="password">Password</label>
+                      {{ form.password1 }}
+                  </div><br>
+                  <div>
+                    <label for="password">confirm Password</label>
+                      {{ form.password2 }}
+                  </div>
+                  <div>
+                    <label class="control control--checkbox mb-0"><span class="caption">User</span>
+                        {{ form.is_user }}
+                      <div></div>
+                    </label>
+                  </div>
+                  <div>
+                    <label class="control control--checkbox mb-0"><span class="caption">Admin</span>
+                        {{ form.is_admin }}
+                      <div ></div>
+                    </label>
+                  </div>
+                  <div >
+                    <label class="control control--checkbox mb-0"><span class="caption">Superuser</span>
+                        {{ form.is_superadmin }}
+                      <div class="control__indicator"></div>
+                    </label>
+                  </div>
+                    <span class="text-error">{{ form.errors }}</span>
+                  <input type="submit"  value="Register" class="btn btn-primary">
+                </form>
+          </div>
+        </center>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+{%endblock%}

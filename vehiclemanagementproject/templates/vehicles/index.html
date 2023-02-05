@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+ {% block title %}
+    <title>unouthorized</title>
+ {%endblock%}
+{% block content %}
+<body class="container-sm  p-3 mb-2 bg-secondary text-white">
+            <center>
+                <div class="container-sm  p-3 mb-2 bg-secondary text-white">
+                  <div class="mb-4">
+                      <h1>Welcome To Vehicle Management App</h1>
+                  </div>
+                  <label>Log in if you already have registered!</label>
+                  <div>
+                      <div><button class="btn btn-danger"><a style="color:black" href="{% url 'login_view' %}">login</a></button></div>
+                  </div>
+                  <label>If not register here!</label>
+                  <div >
+                      <div><button class="btn btn-warning"><a style="color:black" href="{% url 'register' %}">register</a></button></div>
+                  </div>
+                </div>
+            </center>
+  </body>
+{%endblock%}
